@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "client")
-@NoArgsConstructor
-@AllArgsConstructor
 public class ClientEntity extends Person {
 
 }

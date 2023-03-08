@@ -1,10 +1,7 @@
 package com.pinot.msdrummanager.domain.entity;
 
 import com.pinot.msdrummanager.domain.constant.PadlockStatusEnum;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,13 +11,19 @@ import lombok.Setter;
  * Candados
  */
 @Entity
+@Table(name = "padlock")
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
 public class PadlockEntity {
     @Id
+    @GeneratedValue
     private Long id;
+
+    /**
+     * Numero de serie del candado, el cual podría ser unico
+     */
     private Long serial;
     private String unlock;
 

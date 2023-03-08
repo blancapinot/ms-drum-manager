@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "user")
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "system_user")
 public class UserEntity extends Person{
 }
